@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>New User</title>
+    <link rel=stylesheet type="text/css" href="login.css">
+    <script type="text/javascript" src="login.js"></script>
+    <script src="lib/jquery-1.11.1.js"></script>
+    <script src=""></script>
+  </head>
+  
+  <body>
+    <center></center><img class="logo" src="mail.png"/></center>
+    <form id="logininfo" action="signup.php" method="post"> 
+    <fieldset>
+    <div id="info">
+        <strong>First Name</strong><br> <input type="text" id ="firstname" name="firstname" class="textfield"> <br>
+        <strong>Last Name</strong><br> <input type="text" id ="lastname" name="lastname" class="textfield"> <br>
+        <strong>Username</strong><br> <input type="text" id ="username" name="username" class="textfield"> <br>
+        <strong>Password</strong><br> <input type="password" id ="password" name="password" class="textfield"> <br>
+        <button type= "submit" id="login" > <strong> ADD USER </strong> </button>
+    </div>
+    </fieldset>
+    </form>
+     <div id= "login_status"></div>
+  </body>
+</html>

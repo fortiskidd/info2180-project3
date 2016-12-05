@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Cheapomail</title>
+        <link rel="stylesheet" href="homepage.css" type="text/css" />
+        <script type="text/javascript" src="homepage.js"></script>
+    </head>
+    
+    <body>
+        <center><img src="mail.png"><br></center><br>
+        <div id = "menu">
+          <center>
+            <!-- <button class="dobutton" id="Compose" ><div class= "menu_options">Compose</div></button> -->
+            <button onclick="startComp()">Compose</button>
+            <button class="dobutton" id="Inbox" onclick="open_inbox()"><div class= "menu_options">Inbox</div></button>
+            <button class="dobutton" id="People"><div class= "menu_options">People</div></button>
+            
+          </center>
+        </div>
+        <div id="show" style="display:none">
+          <form ng-show="adding" class="add-window" ng-submit="addItem()">
+            <div class='header'>Compose a message</div>
+            <div class='inner'>
+              <div>
+                <label>To: </label>
+                <input type="text" ng-model="newItem.name" required>
+              </div>
+              <div>
+                <label>Cc: </label>
+                <input type="text" ng-model="newItem.publisher" required>
+              </div>
+              <div>
+                <label>Message: </label>
+                <textarea ng-model="newItem.description"></textarea>
+              </div>
+              <div class='button-bar'>
+                <input type="submit" value="Send">
+                <input type="reset" value="Cancel" onclick="stopComp()">
+              </div>
+            </div>
+          </form>
+        </div>
+        <div id="open" class="notification-container" style="display:none">
+          <div class="value unread">
+            <h3 class="msgtitle">
+                Kerry Williams
+            </h3>
+            <p class="subject">
+              Hey dude wats happening?
+            </p>
+          </div>
+        </div>
+      </div>
+      <br><center><a href = "logout.html"><img src = "logout.png"></a></center>
+    </body>
+</html>
